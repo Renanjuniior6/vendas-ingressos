@@ -91,7 +91,7 @@ Authorization: Bearer {{ tokenPartner1 }}
 
 ###
 GET http://localhost:3000/partners/events
-Authorization: Bearer {{ tokenPartner2 }}
+Authorization: Bearer {{ tokenPartner1 }}
 ### 
 GET http://localhost:3000/partners/events/1
 Authorization: Bearer {{ tokenPartner1 }}
