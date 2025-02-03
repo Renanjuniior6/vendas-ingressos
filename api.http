@@ -66,6 +66,7 @@ Content-Type: application/json
 }
 
 ###
+// Criação de customer
 POST http://localhost:3000/customers/register
 Content-Type: application/json
 
