@@ -21,7 +21,6 @@ partnerRoutes.post('/events', async (req, res) => {
     const { name, description, date, location } = req.body
 
     const userId = req.user!.id;
-
     const partnerService = new PartnerService();
     const partner = await partnerService.findByUser(userId);
 
