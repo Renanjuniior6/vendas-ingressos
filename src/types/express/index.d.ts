@@ -7,3 +7,5 @@ declare global {
         }
     }
 }
+
+// Esse arquivo é para sobrescrever (fazer um overwrite) a tipagem do express para que ele entenda a tipagem do "req.user"

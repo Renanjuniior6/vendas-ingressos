@@ -12,3 +12,4 @@ testar para ver se o mysql está realmente funcionando dentro do bash:
 
 OBS: 
 - Função da lib mysql2: Usar mysql com node
+- Toda vez que atualizar a aplicação o banco de dados será resetado

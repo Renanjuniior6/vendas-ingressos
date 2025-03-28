@@ -14,7 +14,7 @@ export class Database {
                 user: 'root',
                 password: 'root',
                 database: 'tickets',
-                port: 33060,
+                port: 33060, // a porta que está sendo exposta pra minha máquina, já a "3306" é a porta que expôe para o container
                 waitForConnections: true,
                 connectionLimit: 10,
                 queueLimit: 0,

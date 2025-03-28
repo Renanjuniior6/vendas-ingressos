@@ -20,7 +20,7 @@ partnerRoutes.post('/register', async (req, res) => {
 partnerRoutes.post('/events', async (req, res) => {
     const { name, description, date, location } = req.body
 
-    const userId = req.user!.id;
+    const userId = req.user!.id; // "!" -> estou dizendo que garanto com certeza que dentro da propriedade "user" não é null
     const partnerService = new PartnerService();
     const partner = await partnerService.findByUser(userId);
 

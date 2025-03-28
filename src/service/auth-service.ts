@@ -8,7 +8,7 @@ export class AuthService {
         
         const userModel = await UserModel.findByEmail(email);
             if(userModel && bcrypt.compareSync(password, userModel.password)) {
-                return jwt.sign({ id: userModel.id, email: userModel.email }, "123456", {
+                return jwt.sign({ id: userModel.id, email: userModel.email }, "123456", { // "123456" -> hash identificador
                         expiresIn: "1h",
                 })
         

@@ -29,7 +29,7 @@ app.use(async (req, res, next) => {
         return next();
     }
 
-    const token = req.headers['authorization']?.split(" ")[1] // optional chaining
+    const token = req.headers['authorization']?.split(" ")[1] // "?" -> optional chaining
     if (!token) {
         res.status(401).json({ message: "Token not provided" })
         return;
@@ -67,7 +67,7 @@ app.listen(3000, async () => {
 
     const connection = Database.getInstance();
     await connection.execute("SET FOREIGN_KEY_CHECKS = 0");
-    await connection.execute("TRUNCATE TABLE tickets");
+    await connection.execute("TRUNCATE TABLE tickets"); // vai limpar o banco de dados toda vez que a aplicação subir
     await connection.execute("TRUNCATE TABLE events");
     await connection.execute("TRUNCATE TABLE customers");
     await connection.execute("TRUNCATE TABLE partners");

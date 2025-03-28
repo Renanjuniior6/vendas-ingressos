@@ -20,7 +20,7 @@ export class PartnerModel {
     const db = options?.connection ?? Database.getInstance();
     const created_at = new Date();
     const [result] = await db.execute<ResultSetHeader>(
-      "INSERT INTO partners (user_id, company_name, created_at) VALUES (?, ?, ?)",
+      "INSERT INTO partners (user_id, company_name, created_at) VALUES (?, ?, ?)", // (?, ?, ?, ?) -> significa os parametros que vão ser passados; cuidado para n concatenar os parametros e fazer um sql injection
       [data.user_id, data.company_name, created_at]
     );
     const partner = new PartnerModel({
