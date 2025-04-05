@@ -19,9 +19,9 @@ export class UserModel {
       email: string;
       password: string;
     },
-    options?: { connection?: PoolConnection }
+    options?: { connection?: PoolConnection } // "connection" -> Garante que a transação feita pelo active record (model) esteja dentro da mesma conexão que usamos para iniciar o modo transaction
   ): Promise<UserModel> {
-    const db = options?.connection ?? Database.getInstance();
+    const db = options?.connection ?? Database.getInstance(); // "??" -> Null Colection, é um operador ternário simplificado 
     const created_at = new Date();
     const hashedPassword = UserModel.hashPassword(data.password);
     const [result] = await db.execute<ResultSetHeader>(
