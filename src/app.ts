@@ -7,6 +7,7 @@ import { customerRoutes } from './controller/customer-controller'
 import { eventRoutes } from './controller/event-controller'
 import { UserService } from './service/user-service'
 import { ticketRoutes } from './controller/ticket-controller'
+import { purchaseRoutes } from './controller/purchase-controller'
 
 const app = express()
 
@@ -62,6 +63,7 @@ app.use('/partners', partnerRoutes);
 app.use('/customers', customerRoutes);
 app.use('/events', eventRoutes);
 app.use('/events', ticketRoutes);
+app.use('/purchases', purchaseRoutes);
 
 app.listen(3000, async () => {
 
@@ -69,6 +71,9 @@ app.listen(3000, async () => {
     await connection.execute("SET FOREIGN_KEY_CHECKS = 0");
     await connection.execute("TRUNCATE TABLE tickets"); // vai limpar o banco de dados toda vez que a aplicação subir
     await connection.execute("TRUNCATE TABLE events");
+    await connection.execute("TRUNCATE TABLE reservation_tickets");
+    await connection.execute("TRUNCATE TABLE purchase_tickets");
+    await connection.execute("TRUNCATE TABLE purchases");
     await connection.execute("TRUNCATE TABLE customers");
     await connection.execute("TRUNCATE TABLE partners");
     await connection.execute("TRUNCATE TABLE users");

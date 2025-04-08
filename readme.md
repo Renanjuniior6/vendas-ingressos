@@ -1,6 +1,9 @@
 comando para rodar o projeto: 
 - npx nodemon
 
+comando para rodar o container do banco de dados:
+- docker compose up
+
 comando para acessar o serviço dentro do mysql:
 - docker compose exec mysql bash
 
