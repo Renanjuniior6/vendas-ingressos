@@ -96,7 +96,7 @@ GET http://localhost:3000/events/1/tickets
 ###
 GET http://localhost:3000/events/1/tickets/1
 
-###
+### Compra dos tickets
 POST http://localhost:3000/purchases
 Content-Type: application/json
 Authorization: Bearer {{ tokenCustomer1 }}
