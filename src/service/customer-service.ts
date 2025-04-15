@@ -27,6 +27,12 @@ async register(data: { name: string, email: string, password: string, address: s
   } catch (e) {
     await connection.rollback();
     throw e;
-  } 
+  } finally {
+    await connection.release();
+  }
  }
+
+ async findByUserId(userId: number): Promise<CustomerModel | null> {
+  return CustomerModel.findByUserId(userId, { user: true });
+}
 }

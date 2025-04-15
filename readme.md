@@ -13,6 +13,13 @@ testar para ver se o mysql está realmente funcionando dentro do bash:
 -use tickets
 -show tables -> vai mostrar as tabelas criadas
 
+comando para compilar o código typescript para javascript
+- npm run build
+- no arquivo tsconfig.json temos que configurar a nossa pasta diretório para "Outdir": "./dist";
+- e colocar o script no package.json "build": "tsc";
+
 OBS: 
 - Função da lib mysql2: Usar mysql com node
 - Toda vez que atualizar a aplicação o banco de dados será resetado
+- As variáveis de ambiente estão no docker-compose
+- A imagem gerada do "docker-compose" é uma imagem mais para produção, poderia criar uma para desenvolvimento também, mas não é o nosso foco agora

@@ -16,4 +16,4 @@ customerRoutes.post('/register', async (req, res) => {
         phone,
     })
     res.status(201).json(result)
-})
+});
