@@ -43,7 +43,7 @@ app.use(async (req, res, next) => {
         const user = await userService.findById(payload.id);
 
         if(!user) {
-            res.status(401).json({ message: "Failed to athenticate token" })
+            res.status(401).json({ message: "Failed to authenticate token" })
             return;
         }
         req.user = user as {id: number, email: string}

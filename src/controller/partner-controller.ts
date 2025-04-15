@@ -14,7 +14,7 @@ partnerRoutes.post('/register', async (req, res) => {
         password,
         company_name,
     });
-    res.status(201).json(result)
+    res.status(201).json(result);
 })
 
 partnerRoutes.post('/events', async (req, res) => {
