@@ -8,6 +8,9 @@ import { eventRoutes } from './controller/event-controller'
 import { UserService } from './service/user-service'
 import { ticketRoutes } from './controller/ticket-controller'
 import { purchaseRoutes } from './controller/purchase-controller'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express()
 
