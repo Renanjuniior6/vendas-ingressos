@@ -1,7 +1,7 @@
 ### Login de parceiro 
 # @name loginPartner1
 
-POST http://localhost:8080/auth/login
+POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 # @name loginCustomer1
 
-POST http://localhost:8080/auth/login
+POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
@@ -41,7 +41,7 @@ Content-Type: application/json
 
 ###
 // Criação de customer
-POST http://localhost:8080/customers/register
+POST http://localhost:3000/customers/register
 Content-Type: application/json
 
 {
@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### Criação de evento pelo parceiro
-POST http://localhost:8080/partners/events
+POST http://localhost:3000/partners/events
 Content-Type: application/json
 Authorization: Bearer {{ tokenPartner1 }}
 
@@ -65,23 +65,23 @@ Authorization: Bearer {{ tokenPartner1 }}
 }
 
 ### Listagem de eventos do parceiro
-GET http://localhost:8080/partners/events
+GET http://localhost:3000/partners/events
 Authorization: Bearer {{ tokenPartner1 }}
 
 
 ### Listagem de um evento do parceiro
-GET http://localhost:8080/partners/events/1
+GET http://localhost:3000/partners/events/1
 Authorization: Bearer {{ tokenPartner1 }}
 
 ### Listagem de eventos
-GET http://localhost:8080/events
+GET http://localhost:3000/events
 
 
 ### Listagem de um evento púbico
-GET http://localhost:8080/events/1
+GET http://localhost:3000/events/1
 
 ### Criação de tickets
-POST http://localhost:8080/events/1/tickets
+POST http://localhost:3000/events/1/tickets
 Content-Type: application/json
 Authorization: Bearer {{ tokenPartner1 }}
 
@@ -91,13 +91,13 @@ Authorization: Bearer {{ tokenPartner1 }}
 }
 
 ### (Poderia trabalhar com paginação)
-GET http://localhost:8080/events/1/tickets
+GET http://localhost:3000/events/1/tickets
 
 ###
-GET http://localhost:8080/events/1/tickets/1
+GET http://localhost:3000/events/1/tickets/1
 
 ### Compra dos tickets
-POST http://localhost:8080/purchases
+POST http://localhost:3000/purchases
 Content-Type: application/json
 Authorization: Bearer {{ tokenCustomer1 }}
 
@@ -107,4 +107,4 @@ Authorization: Bearer {{ tokenCustomer1 }}
 }
 
 ### Rota base
-GET http://localhost:8080/
+GET http://localhost:3000/

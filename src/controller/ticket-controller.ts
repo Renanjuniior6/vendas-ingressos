@@ -18,7 +18,7 @@ ticketRoutes.post('/:eventId/tickets', async (req, res) => {
     const { num_tickets, price } = req.body;
     const { eventId } = req.params;
     const ticketService = new TicketService();
-    await ticketService.createMany({
+    await ticketService.createMany({ // TODO  Fazer a validação caso o evento não exista
         eventId: +eventId,
         numTickets: num_tickets,
         price,
