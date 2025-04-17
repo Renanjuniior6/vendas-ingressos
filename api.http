@@ -90,10 +90,10 @@ Authorization: Bearer {{ tokenPartner1 }}
     "price": 100
 }
 
-### (Poderia trabalhar com paginação)
+### Listar tickets de um evento público (Poderia trabalhar com paginação)
 GET http://venda-ingresso-balancer-1842400306.us-east-2.elb.amazonaws.com/events/1/tickets
 
-###
+### Listar um ticket específico de um evento
 GET http://venda-ingresso-balancer-1842400306.us-east-2.elb.amazonaws.com/events/1/tickets/1
 
 ### Compra dos tickets
