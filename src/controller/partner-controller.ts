@@ -7,14 +7,19 @@ export const partnerRoutes = Router();
 partnerRoutes.post('/register', async (req, res) => {
     const { name, email, password, company_name } = req.body
 
-    const partnerService = new PartnerService();
-    const result = await partnerService.register({
-        name, 
-        email,
-        password,
-        company_name,
-    });
-    res.status(201).json(result)
+    try {
+        const partnerService = new PartnerService();
+        const result = await partnerService.register({
+            name, 
+            email,
+            password,
+            company_name,
+        });
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ message: 'This email is already in use'})
+    }
+   
 })
 
 partnerRoutes.post('/events', async (req, res) => {
@@ -53,6 +58,7 @@ partnerRoutes.get('/events', async (req, res) => {
 
     const eventService = new EventService();
     const result = await eventService.findAll(partner.id);
+
     res.json(result);
 })
 
