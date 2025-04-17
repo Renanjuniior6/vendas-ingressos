@@ -43,9 +43,9 @@
 O projeto a princípio executa suas requisições através de um container hospedado na <b>AWS</b>, mas está temporariamente fora do ar. Em breve estará ao ar novamente. No momento só é possível fazer requisições locais podendo usar o Docker ou rodar localmente;
 
 ## 📃 Informações
-- A imagem gerada no container é mais para produção
+- A imagem gerada no container está na versão de desenvolvimento até o AWS voltar
 - Por questões de desenvolvimento toda vez que a aplicação for salva o banco de dados será resetado
-- As configurações podem ser definidas para rodar localmente como localhost e root, 
+- As configurações do banco estão definidas para rodar localmente como localhost e root, 
 - O projeto está estruturado na arquitetura MVC
 
 ## 👇 É recomendável ter em sua máquina para rodar
