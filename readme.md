@@ -73,13 +73,13 @@ $ npx nodemon
 ## 🌐 Rodando o container do MySQL no Docker
 
 ```javascript
-// Com o docker instalado na sua máquina, execute
+// Com o docker instalado na sua máquina, execute este comando para subir o banco
 $ docker compose up
 
-// Para derrubar o container execute
+// Caso queira derrubar o container execute
 $ docker compose down
 
-// Para parar o container execute
+// Caso queira parar o container execute
 $ docker compose stop
 ```
 
