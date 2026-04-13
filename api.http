@@ -74,11 +74,11 @@ GET http://localhost:3000/partners/events/1
 Authorization: Bearer {{ tokenPartner1 }}
 
 ### Listagem de eventos
-GET http://localhost:3000/events
+GET http://localhost:8080/events
 
 
 ### Listagem de um evento púbico
-GET http://localhost:3000/events/1
+GET http://localhost:8080/events/1
 
 ### Criação de tickets
 POST http://localhost:3000/events/1/tickets

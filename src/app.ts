@@ -9,6 +9,8 @@ import { purchaseRoutes } from "./controller/purchase-controller";
 import { ticketRoutes } from "./controller/ticket-controller";
 import { Database } from "./database";
 import { UserService } from "./service/user-service";
+import { convertToNumber } from "../utils/convertToNumber";
+import { convertToString } from "../utils/convertToString";
 
 dotenv.config();
 
@@ -81,6 +83,8 @@ app.listen(3000, async () => {
 	await connection.execute("TRUNCATE TABLE partners");
 	await connection.execute("TRUNCATE TABLE users");
 	await connection.execute("SET FOREIGN_KEY_CHECKS = 1");
+	console.log(convertToString(12));
+	console.log(convertToNumber('12'));
 
 	console.log("Running in http://localhost:3000");
 });
